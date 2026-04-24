@@ -1,0 +1,18 @@
+# agent / editor
+.claude/
+CLAUDE.md
+AGENTS.md
+.cursor/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# env
+.env*
+!.env.example
+
+# node (jeśli ktoś localnie odpali npm install)
+node_modules/
+*.log

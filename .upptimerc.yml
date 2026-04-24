@@ -1,0 +1,77 @@
+# Upptime config dla status.vatownik.pl
+# Docs: https://upptime.js.org/docs/configuration
+
+owner: monczga
+repo: vatownik-status
+
+sites:
+  - name: vatownik.pl
+    url: https://vatownik.pl
+  - name: Blog
+    url: https://vatownik.pl/blog
+  - name: RSS feed
+    url: https://vatownik.pl/blog/rss.xml
+  - name: Lead form API
+    url: https://vatownik.pl/api/lead
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"healthcheck":true}'
+    # Endpoint odrzuca healthcheck błędem walidacji — 4xx = żywy, 5xx = incydent
+    expectedStatusCodes:
+      - 400
+      - 422
+  - name: Contact form API
+    url: https://vatownik.pl/api/contact
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"healthcheck":true}'
+    expectedStatusCodes:
+      - 400
+      - 422
+
+status-website:
+  cname: status.vatownik.pl
+  name: vatownik status
+  logoUrl: https://vatownik.pl/brand/vatownik-mark.svg
+  introTitle: "Status usług vatownik"
+  introMessage: "Sprawdzamy landing, blog i endpointy API co 5 minut. Każdy incydent trafia jako GitHub Issue z timelinem i raportem post-mortem."
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/monczga/vatownik-status
+    - title: vatownik.pl
+      href: https://vatownik.pl
+
+assignees:
+  - monczga
+
+user-agent: Upptime/vatownik-status (+https://status.vatownik.pl)
+
+i18n:
+  activeIncidents: Aktywne incydenty
+  allSystemsOperational: Wszystkie systemy działają
+  degradedPerformance: Spadek wydajności
+  partialOutage: Częściowa awaria
+  majorOutage: Poważna awaria
+  pastIncidents: Historia incydentów
+  incidents: Incydenty
+  incidentReport: "Raport incydentu:"
+  resolved: Rozwiązane
+  investigating: W trakcie analizy
+  status: Status
+  description: Opis
+  upLabel: dostępny
+  downLabel: niedostępny
+  degradedLabel: spadek wydajności
+  url: URL
+  responseTime: Czas odpowiedzi
+  uptime: Dostępność
+  uptimeDay: Ostatnie 24h
+  uptimeWeek: Ostatnie 7 dni
+  uptimeMonth: Ostatnie 30 dni
+  uptimeYear: Ostatni rok
+  sevenDays: "Ostatnie 7 dni"
+  oneDay: "Ostatnie 24h"
