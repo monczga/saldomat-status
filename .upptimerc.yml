@@ -1,18 +1,18 @@
-# Upptime config dla status.vatownik.pl
+# Upptime config dla status.saldomat.pl
 # Docs: https://upptime.js.org/docs/configuration
 
 owner: monczga
-repo: vatownik-status
+repo: saldomat-status
 
 sites:
-  - name: vatownik.pl
-    url: https://vatownik.pl
+  - name: saldomat.pl
+    url: https://saldomat.pl
   - name: Blog
-    url: https://vatownik.pl/blog
+    url: https://saldomat.pl/blog
   - name: RSS feed
-    url: https://vatownik.pl/blog/rss.xml
+    url: https://saldomat.pl/blog/rss.xml
   - name: Lead form API
-    url: https://vatownik.pl/api/lead
+    url: https://saldomat.pl/api/lead
     method: POST
     headers:
       - "Content-Type: application/json"
@@ -22,7 +22,7 @@ sites:
       - 400
       - 422
   - name: Contact form API
-    url: https://vatownik.pl/api/contact
+    url: https://saldomat.pl/api/contact
     method: POST
     headers:
       - "Content-Type: application/json"
@@ -32,23 +32,23 @@ sites:
       - 422
 
 status-website:
-  cname: status.vatownik.pl
-  name: vatownik status
-  logoUrl: https://vatownik.pl/brand/vatownik-mark.svg
-  introTitle: "Status usług vatownik"
+  cname: status.saldomat.pl
+  name: saldomat status
+  logoUrl: https://saldomat.pl/brand/logo-mark.svg
+  introTitle: "Status usług saldomat"
   introMessage: "Sprawdzamy landing, blog i endpointy API co 5 minut. Każdy incydent trafia jako GitHub Issue z timelinem i raportem post-mortem."
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/monczga/vatownik-status
-    - title: vatownik.pl
-      href: https://vatownik.pl
+      href: https://github.com/monczga/saldomat-status
+    - title: saldomat.pl
+      href: https://saldomat.pl
 
 assignees:
   - monczga
 
-user-agent: Upptime/vatownik-status (+https://status.vatownik.pl)
+user-agent: Upptime/saldomat-status (+https://status.saldomat.pl)
 
 i18n:
   activeIncidents: Aktywne incydenty
